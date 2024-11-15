@@ -1,10 +1,10 @@
-package com.project.blog.repository;
+package com.project.alertamogi.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.project.blog.model.Usuario;
+import com.project.alertamogi.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 	

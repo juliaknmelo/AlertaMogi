@@ -1,4 +1,4 @@
-package com.project.blog.configuration;
+package com.project.alertamogi.configuration;
 
 import org.springdoc.core.customizers.OpenApiCustomizer;
 import org.springframework.context.annotation.Bean;
@@ -18,8 +18,8 @@ public class SwaggerConfig {
 	OpenAPI springBlogOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-						.title("Projeto Blog")
-						.description("Projeto Blog - Projeto Integrador Unisa")
+						.title("Projeto Alerta Mogi")
+						.description("Projeto Alerta Mogi - Projeto Integrador Unisa")
 						.version("v0.0.1")
 						.license(new License()
 								.name("Projeto Integrador")

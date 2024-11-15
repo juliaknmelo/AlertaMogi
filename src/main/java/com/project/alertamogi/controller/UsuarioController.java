@@ -1,4 +1,4 @@
-package com.project.blog.controller;
+package com.project.alertamogi.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.blog.model.UsuarioLogin;
-import com.project.blog.model.Usuario;
-import com.project.blog.repository.UsuarioRepository;
-import com.project.blog.service.UsuarioService;
+import com.project.alertamogi.model.Usuario;
+import com.project.alertamogi.model.UsuarioLogin;
+import com.project.alertamogi.repository.UsuarioRepository;
+import com.project.alertamogi.service.UsuarioService;
 
 import jakarta.validation.Valid;
 

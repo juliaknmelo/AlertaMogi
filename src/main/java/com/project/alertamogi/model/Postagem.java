@@ -1,18 +1,22 @@
-package com.project.blog.model;
+package com.project.alertamogi.model;
 
+import java.net.URI;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.UpdateTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -34,9 +38,61 @@ public class Postagem {
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
+	private TagEnum tag;
+	
+	@NotBlank
+	@Size(min = 10, max = 300, message = "O atributo rua deve ser preenchido")
+	private String rua;
+	
+	@NotNull
+	private Long numero;
+	
+	@NotBlank
+	@Size(min = 10, max = 300, message = "O atributo bairro deve ser preenchido")
+	private String bairro;
+	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Usuario usuario;
+	
+	
+	@OneToOne (cascade=CascadeType.PERSIST)
+	@JsonIgnoreProperties("image")
+	private Image imagem;
+	
+
+	public String getRua() {
+		return rua;
+	}
+
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+	public Long getNumero() {
+		return numero;
+	}
+
+	public void setNumero(Long numero) {
+		this.numero = numero;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+
+	public Image getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(Image imagem) {
+		this.imagem = imagem;
+	}
 
 	public Long getId() {
 		return id;
@@ -44,6 +100,14 @@ public class Postagem {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public TagEnum getTag() {
+		return tag;
+	}
+
+	public void setTag(TagEnum tag) {
+		this.tag = tag;
 	}
 
 	public String getTitulo() {

@@ -1,4 +1,4 @@
-package com.project.blog.security;
+package com.project.alertamogi.security;
 
 import java.io.IOException;
 

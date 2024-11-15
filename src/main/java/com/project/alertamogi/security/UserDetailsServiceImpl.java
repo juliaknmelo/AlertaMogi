@@ -1,4 +1,4 @@
-package com.project.blog.security;
+package com.project.alertamogi.security;
 
 import java.util.Optional;
 
@@ -10,8 +10,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.project.blog.model.Usuario;
-import com.project.blog.repository.UsuarioRepository;
+import com.project.alertamogi.model.Usuario;
+import com.project.alertamogi.repository.UsuarioRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService{

@@ -1,4 +1,4 @@
-package com.project.blog.model;
+package com.project.alertamogi.model;
 
 import java.util.List;
 

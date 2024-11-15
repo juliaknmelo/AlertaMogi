@@ -1,5 +1,6 @@
-package com.project.blog.controller;
+package com.project.alertamogi.controller;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,10 +17,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.project.blog.model.Postagem;
-import com.project.blog.repository.PostagemRepository;
+import com.project.alertamogi.model.Image;
+import com.project.alertamogi.model.Postagem;
+import com.project.alertamogi.repository.PostagemRepository;
 
 import jakarta.validation.Valid;
 
@@ -31,6 +34,7 @@ public class PostagemController {
 	@Autowired
 	private PostagemRepository postagemRepository;
 
+	
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getAll() {
 		return ResponseEntity.ok(postagemRepository.findAll());
@@ -47,8 +51,13 @@ public class PostagemController {
 		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 
+	
+	
+	
 	@PostMapping
 	public ResponseEntity<Postagem> post(@Valid @RequestBody Postagem postagem) {
+		
+		
 		return ResponseEntity.status(HttpStatus.CREATED).body(postagemRepository.save(postagem));
 	}
 

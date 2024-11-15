@@ -1,4 +1,4 @@
-package com.project.blog.security;
+package com.project.alertamogi.security;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 

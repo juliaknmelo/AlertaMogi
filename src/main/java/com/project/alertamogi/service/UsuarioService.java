@@ -1,4 +1,4 @@
-package com.project.blog.service;
+package com.project.alertamogi.service;
 
 import java.util.Optional;
 
@@ -11,10 +11,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.project.blog.model.UsuarioLogin;
-import com.project.blog.model.Usuario;
-import com.project.blog.repository.UsuarioRepository;
-import com.project.blog.security.JwtService;
+import com.project.alertamogi.model.Usuario;
+import com.project.alertamogi.model.UsuarioLogin;
+import com.project.alertamogi.repository.UsuarioRepository;
+import com.project.alertamogi.security.JwtService;
 
 @Service
 public class UsuarioService {
