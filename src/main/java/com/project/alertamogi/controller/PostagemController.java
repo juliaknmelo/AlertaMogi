@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.project.alertamogi.model.Image;
 import com.project.alertamogi.model.Postagem;
 import com.project.alertamogi.repository.PostagemRepository;
 

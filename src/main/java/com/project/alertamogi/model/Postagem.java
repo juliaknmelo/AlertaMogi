@@ -55,11 +55,7 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private Usuario usuario;
 	
-	
-	@OneToOne (cascade=CascadeType.PERSIST)
-	@JsonIgnoreProperties("image")
-	private Image imagem;
-	
+
 
 	public String getRua() {
 		return rua;
@@ -85,14 +81,6 @@ public class Postagem {
 		this.bairro = bairro;
 	}
 
-
-	public Image getImagem() {
-		return imagem;
-	}
-
-	public void setImagem(Image imagem) {
-		this.imagem = imagem;
-	}
 
 	public Long getId() {
 		return id;
