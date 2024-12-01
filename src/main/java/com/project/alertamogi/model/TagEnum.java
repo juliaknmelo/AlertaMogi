@@ -2,7 +2,7 @@ package com.project.alertamogi.model;
 
 public enum TagEnum {
 	
-	INUNDACACAO(0), 
+	INUNDACAO(0), 
 	ALAGAMENTO(1),
 	QUEIMADA(2);
 
